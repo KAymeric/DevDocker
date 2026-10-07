@@ -1,0 +1,13 @@
+services:
+  api:
+    image: ${API_IMAGE:-td4-api}
+    ports:
+      - "${API_PORT:-8000}:3000"
+    restart: unless-stopped
+
+  db:
+    restart: unless-stopped
+
+  cache:
+    restart: unless-stopped
+
